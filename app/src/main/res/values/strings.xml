@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">iOSCalculator</string>
+    <string name="s_multi_sign">\u00D7</string>
+    <string name="s_division_sign">\u00F7</string>
+    <string name="s_plus_sign">+</string>
+    <string name="s_minus_sign">\u2212</string>
+    <string name="s_clear">C</string>
+    <string name="s_percent">%</string>
+    <string name="s_plus_minus">\u00B1</string>
+    <string name="s_0_0">0.0</string>
+    <string name="s_0">0</string>
+    <string name="s_1">1</string>
+    <string name="s_2">2</string>
+    <string name="s_3">3</string>
+    <string name="s_4">4</string>
+    <string name="s_5">5</string>
+    <string name="s_6">6</string>
+    <string name="s_7">7</string>
+    <string name="s_8">8</string>
+    <string name="s_9">9</string>
+    <string name="s_dot">.</string>
+    <string name="s_equal">=</string>
+
+</resources>
