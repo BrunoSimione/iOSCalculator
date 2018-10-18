@@ -29,5 +29,11 @@
         <item name="android:textColor">@color/gray</item>
     </style>
 
+    <style name="calc_button.functions">
+        <item name="android:background">@color/dark_red</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
 
 </resources>

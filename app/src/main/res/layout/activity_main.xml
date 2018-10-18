@@ -19,10 +19,10 @@
         <TextView
             android:id="@+id/numberText"
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="110dp"
             android:maxLength="30"
             android:maxLines="2"
-            android:text="abc"
+            android:text="@string/s_0"
             android:gravity="center_vertical|right"
             android:textColor="@android:color/white"
             android:textSize="45sp"
@@ -33,13 +33,13 @@
         <TextView
             android:id="@+id/detailText"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:gravity="center_vertical"
             android:maxLength="10"
             android:maxLines="1"
             android:paddingLeft="10dp"
-            android:text="detail"
-            android:textColor="@android:color/white"
+            android:text="result"
+            android:textColor="@android:color/darker_gray"
             android:textSize="30sp"
             tools:fontFamily="sans-serif" />
 
@@ -49,7 +49,47 @@
             android:layout_height="wrap_content"
             android:gravity="bottom"
             android:orientation="vertical"
+            android:background="@color/darker_gray"
             >
+
+            <LinearLayout
+                android:id="@+id/rowC1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <Button
+                    android:id="@+id/btnC1"
+                    style="@style/calc_button.functions"
+                    android:text="@string/s_clear"
+                    android:onClick="btnClicked"
+                    android:layout_weight="25"/>
+
+                <Button
+                    android:id="@+id/btnMPlus"
+                    style="@style/calc_button.functions"
+                    android:text="@string/s_mplus"
+                    android:layout_weight="18.75"/>
+
+                <Button
+                    android:id="@+id/btnMMinus"
+                    style="@style/calc_button.functions"
+                    android:text="@string/s_mminus"
+                    android:layout_weight="18.75"/>
+
+                <Button
+                    android:id="@+id/btnMR"
+                    style="@style/calc_button.functions"
+                    android:text="@string/s_mr"
+                    android:layout_weight="18.75"/>
+                <Button
+                    android:id="@+id/btnMC"
+                    style="@style/calc_button.functions"
+                    android:text="@string/s_mc"
+                    android:layout_weight="18.75"/>
+
+            </LinearLayout>
 
 
             <LinearLayout
@@ -61,12 +101,15 @@
                 <Button
                     android:id="@+id/btnC"
                     style="@style/calc_button.top_row"
+                    android:onClick="btnClicked"
                     android:text="@string/s_clear" />
 
                 <Button
                     android:id="@+id/btnPercent"
                     style="@style/calc_button.top_row"
-                    android:text="@string/s_percent" />
+                    android:text="@string/s_percent"
+                    android:onClick="btnClicked"
+                    />
 
                 <Button
                     android:id="@+id/btnInvertSignal"
@@ -76,6 +119,7 @@
                 <Button
                     android:id="@+id/btnDivision"
                     style="@style/calc_button.end_column"
+                    android:onClick="btnClicked"
                     android:text="@string/s_division_sign" />
 
             </LinearLayout>
@@ -89,21 +133,25 @@
                 <Button
                     android:id="@+id/btn7"
                     style="@style/calc_button"
+                    android:onClick="btnClicked"
                     android:text="@string/s_7" />
 
                 <Button
                     android:id="@+id/btn8"
                     style="@style/calc_button"
+                    android:onClick="btnClicked"
                     android:text="@string/s_8" />
 
                 <Button
                     android:id="@+id/btn9"
                     style="@style/calc_button"
+                    android:onClick="btnClicked"
                     android:text="@string/s_9" />
 
                 <Button
                     android:id="@+id/btnMulti"
                     style="@style/calc_button.end_column"
+                    android:onClick="btnClicked"
                     android:text="@string/s_multi_sign" />
 
             </LinearLayout>
@@ -117,21 +165,25 @@
                 <Button
                     android:id="@+id/btn4"
                     style="@style/calc_button"
+                    android:onClick="btnClicked"
                     android:text="@string/s_4" />
 
                 <Button
                     android:id="@+id/btn5"
                     style="@style/calc_button"
+                    android:onClick="btnClicked"
                     android:text="@string/s_5" />
 
                 <Button
                     android:id="@+id/btn6"
                     style="@style/calc_button"
+                    android:onClick="btnClicked"
                     android:text="@string/s_6" />
 
                 <Button
                     android:id="@+id/btnMinus"
                     style="@style/calc_button.end_column"
+                    android:onClick="btnClicked"
                     android:text="@string/s_minus_sign" />
 
             </LinearLayout>
@@ -145,21 +197,25 @@
                 <Button
                     android:id="@+id/btn1"
                     style="@style/calc_button"
+                    android:onClick="btnClicked"
                     android:text="@string/s_1" />
 
                 <Button
                     android:id="@+id/btn2"
                     style="@style/calc_button"
+                    android:onClick="btnClicked"
                     android:text="@string/s_2" />
 
                 <Button
                     android:id="@+id/btn3"
                     style="@style/calc_button"
+                    android:onClick="btnClicked"
                     android:text="@string/s_3" />
 
                 <Button
                     android:id="@+id/btnPlus"
                     style="@style/calc_button.end_column"
+                    android:onClick="btnClicked"
                     android:text="@string/s_plus_sign" />
 
             </LinearLayout>
@@ -174,17 +230,20 @@
                 <Button
                     android:id="@+id/btn0"
                     style="@style/calc_button"
+                    android:onClick="btnClicked"
                     android:layout_weight="20"
                     android:text="@string/s_0" />
 
                 <Button
                     android:id="@+id/btnDot"
                     style="@style/calc_button"
+                    android:onClick="btnClicked"
                     android:text="@string/s_dot" />
 
                 <Button
                     android:id="@+id/btnEqual"
                     style="@style/calc_button.end_column"
+                    android:onClick="btnClicked"
                     android:text="@string/s_equal" />
 
             </LinearLayout>

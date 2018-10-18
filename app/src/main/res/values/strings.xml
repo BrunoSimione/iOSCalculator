@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">iOSCalculator</string>
+    <string name="app_name">iOS-Like Calculator</string>
     <string name="s_multi_sign">\u00D7</string>
     <string name="s_division_sign">\u00F7</string>
     <string name="s_plus_sign">+</string>
@@ -20,5 +20,9 @@
     <string name="s_9">9</string>
     <string name="s_dot">.</string>
     <string name="s_equal">=</string>
+    <string name="s_mplus">M+</string>
+    <string name="s_mminus">M-</string>
+    <string name="s_mr">MR</string>
+    <string name="s_mc">MC</string>
 
 </resources>
