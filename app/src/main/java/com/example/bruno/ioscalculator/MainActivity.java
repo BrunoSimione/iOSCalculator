@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     CalculatorEngine engine;
     TextView txtNumber;
+    TextView txtDetail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         txtNumber = (TextView) findViewById(R.id.numberText);
+        txtDetail = (TextView) findViewById(R.id.detailText);
         engine = new CalculatorEngine();
 
     }
@@ -27,47 +29,42 @@ public class MainActivity extends AppCompatActivity {
         switch (id){
             case R.id.btn0:
                 engine.numberClicked(0) ;
-                txtNumber.setText(engine.getNumber());
                 break;
             case R.id.btn1:
                 engine.numberClicked(1) ;
-                txtNumber.setText(engine.getNumber());
                 break;
             case R.id.btn2:
                 engine.numberClicked(2) ;
-                txtNumber.setText(engine.getNumber());
                 break;
             case R.id.btn3:
                 engine.numberClicked(3) ;
-                txtNumber.setText(engine.getNumber());
                 break;
             case R.id.btn4:
                 engine.numberClicked(4) ;
-                txtNumber.setText(engine.getNumber());
                 break;
             case R.id.btn5:
                 engine.numberClicked(5) ;
-                txtNumber.setText(engine.getNumber());
                 break;
             case R.id.btn6:
                 engine.numberClicked(6) ;
-                txtNumber.setText(engine.getNumber());
                 break;
             case R.id.btn7:
                 engine.numberClicked(7) ;
-                txtNumber.setText(engine.getNumber());
                 break;
             case R.id.btn8:
                 engine.numberClicked(8) ;
-                txtNumber.setText(engine.getNumber());
                 break;
             case R.id.btn9:
                 engine.numberClicked(9) ;
-                txtNumber.setText(engine.getNumber());
                 break;
             case R.id.btnDot:
                 engine.dotClicked();
-                txtNumber.setText(engine.getNumber());
+                break;
+            case R.id.btnInvertSignal:
+                engine.invertSignal();
+                break;
+            case R.id.btnPercent:
+                engine.percentualClicked();
                 break;
             case R.id.btnDivision:
                 engine.setOperator("Division") ;
@@ -77,28 +74,36 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btnPlus:
                 engine.setOperator("Sum") ;
-                //String text = "Number: " + engine.getNumber() + " Op1: " + engine.operand1;
-                //Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btnMinus:
                 engine.setOperator("Sub") ;
                 break;
             case R.id.btnEqual:
                 engine.calculateTotal();
-                txtNumber.setText(engine.getNumber());
                 break;
             case R.id.btnC:
                 engine.clean_number() ;
-                txtNumber.setText(engine.getNumber());
                 break;
             case R.id.btnC1:
                 engine.clean_number() ;
-                txtNumber.setText(engine.getNumber());
                 break;
+            case R.id.btnMC:
+                engine.cleanMemory();
+                break;
+            case R.id.btnMR:
+                engine.recoverMemory();
+                break;
+            case R.id.btnMMinus:
+                engine.memorySub();
+                break;
+            case R.id.btnMPlus:
+                engine.memorySum();
+                break;
+
         }
 
-
-
+        txtNumber.setText(engine.getNumber());
+        txtDetail.setText(engine.getDetail());
     }
 
 
